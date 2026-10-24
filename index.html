@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#087f5b">
+<meta name="description" content="বাংলাদেশের নাগরিক সেবা সম্পর্কে সহজ বাংলায় তথ্য ও সরকারি ওয়েবসাইটের লিংক।">
+<title>NagorikBondhu — নাগরিকবন্ধু</title>
+<style>
+:root{--green:#087f5b;--deep:#064e3b;--mint:#e9f8f0;--ink:#17372c;--muted:#64766f;--bg:#f5faf7;--line:#dcebe3;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Noto Sans Bengali",sans-serif}
+button,input{font:inherit}button,a{-webkit-tap-highlight-color:transparent}.wrap{width:min(1060px,100% - 32px);margin:auto}
+header{background:linear-gradient(130deg,#064e3b,#087f5b 68%,#16a36f);color:white;padding:17px 0 34px}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:12px}.brand{display:flex;align-items:center;gap:10px;color:white;text-decoration:none}.brandmark{width:44px;height:44px;border-radius:15px;background:#ffffff20;display:grid;place-items:center;font-size:24px}.brand strong{display:block;font-size:20px}.brand small{opacity:.8;font-size:11px}
+.navtag{font-size:12px;border:1px solid #ffffff50;border-radius:30px;padding:7px 10px}
+.hero{padding:34px 0 10px;max-width:680px}.eyebrow{font-size:13px;color:#c8f7df;font-weight:700;letter-spacing:.2px}.hero h1{font-size:clamp(28px,6vw,44px);line-height:1.28;margin:10px 0}.hero p{line-height:1.8;color:#e3fff0;margin:0 0 20px;max-width:600px}
+.search{display:flex;gap:8px;background:white;border-radius:16px;padding:7px;max-width:650px;box-shadow:0 12px 30px #003b251e}.search input{border:0;outline:0;flex:1;min-width:0;padding:12px;color:var(--ink);background:transparent}.primary{background:var(--green);color:white;border:0;border-radius:11px;padding:12px 16px;font-weight:750;cursor:pointer}.search .primary{white-space:nowrap}
+.quick{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}.chip{border:1px solid #ffffff65;background:#ffffff12;color:white;border-radius:30px;padding:7px 11px;font-size:12px;cursor:pointer}
+main{padding:22px 0 40px}.notice{display:flex;gap:12px;align-items:flex-start;background:#fff8e6;border:1px solid #f0dfae;border-radius:15px;padding:13px 15px;color:#68531b;font-size:13px;line-height:1.7}.notice b{display:block;margin-bottom:2px}
+.sectionhead{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:28px 0 14px}.sectionhead h2{font-size:21px;margin:0}.sectionhead p{font-size:12px;color:var(--muted);margin:4px 0 0}.counter{font-size:12px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.card{background:white;border:1px solid var(--line);border-radius:18px;padding:17px;box-shadow:0 5px 16px #164b3210;display:flex;flex-direction:column;align-items:flex-start;min-width:0}.iconbox{width:47px;height:47px;background:var(--mint);border-radius:15px;display:grid;place-items:center;font-size:25px}.card h3{font-size:17px;margin:12px 0 6px}.card p{font-size:13px;line-height:1.7;color:var(--muted);margin:0 0 15px;flex:1}.actions{display:flex;gap:8px;flex-wrap:wrap}.btn{border:0;border-radius:10px;padding:9px 11px;font-size:12px;font-weight:750;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:5px}.btn.primary{background:var(--green);color:white}.btn.light{background:#edf7f1;color:var(--deep)}
+.results{margin-top:15px}.results:empty{display:none}.empty{background:white;border:1px solid var(--line);padding:18px;border-radius:14px;color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.step{background:white;border:1px solid var(--line);border-radius:16px;padding:16px}.stepnum{width:31px;height:31px;border-radius:10px;background:var(--mint);color:var(--deep);font-weight:800;display:grid;place-items:center}.step h3{font-size:15px;margin:10px 0 5px}.step p{font-size:13px;line-height:1.7;color:var(--muted);margin:0}
+.helpbox{margin-top:25px;padding:19px;background:#eaf7ef;border-radius:18px;display:flex;align-items:center;justify-content:space-between;gap:15px}.helpbox h3{margin:0 0 5px;font-size:18px}.helpbox p{margin:0;color:#45675a;font-size:13px;line-height:1.7}
+footer{padding:20px 0 28px;border-top:1px solid var(--line);font-size:12px;line-height:1.8;color:var(--muted)}footer .footrow{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.modal{position:fixed;inset:0;background:#062b20bd;display:none;align-items:center;justify-content:center;padding:16px;z-index:10}.modal.open{display:flex}.dialog{width:min(570px,100%);max-height:88vh;overflow:auto;background:white;border-radius:22px;padding:22px;box-shadow:0 24px 80px #001e1640}.dialogtop{display:flex;gap:12px;align-items:center}.dialog h2{font-size:21px;margin:0}.dialog .sub{font-size:13px;color:var(--muted);margin:5px 0 0}.close{margin-left:auto;border:0;border-radius:10px;background:#edf6f0;color:var(--deep);padding:8px 11px;cursor:pointer}.dialog h3{font-size:15px;margin:21px 0 8px}.dialog li{line-height:1.75;margin:7px 0;font-size:14px}.dialog .callout{background:#f1f8f4;border-radius:12px;padding:12px;font-size:13px;line-height:1.7;margin-top:15px}.dialogactions{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+@media(max-width:720px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.steps{grid-template-columns:1fr}.hero{padding-top:26px}.helpbox{align-items:flex-start;flex-direction:column}}
+@media(max-width:440px){.wrap{width:calc(100% - 24px)}header{padding-top:13px}.navtag{display:none}.grid{grid-template-columns:1fr}.card{padding:16px}.search{flex-direction:column}.search .primary{width:100%}.hero h1{font-size:29px}.sectionhead h2{font-size:19px}}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap">
+  <nav class="nav">
+   <a class="brand" href="#" aria-label="নাগরিকবন্ধু হোম">
+    <span class="brandmark">🤝</span><span><strong>নাগরিকবন্ধু</strong><small>NAGORIKBONDHU</small></span>
+   </a>
+   <span class="navtag">সহজ বাংলায় নাগরিক সেবা</span>
+  </nav>
+  <section class="hero">
+   <div class="eyebrow">আপনার ডিজিটাল সহকারী 🇧🇩</div>
+   <h1>প্রয়োজনীয় সেবা খুঁজুন,<br>সহজেই বাংলায়</h1>
+   <p>কোন কাগজ লাগতে পারে, কোথা থেকে শুরু করবেন এবং অফিসিয়াল তথ্য কোথায় পাবেন—সবকিছুর সহজ নির্দেশনা এক জায়গায়।</p>
+   <div class="search" role="search">
+    <input id="searchInput" type="search" placeholder="সেবা লিখুন: NID, পাসপোর্ট, জমি..." aria-label="সেবা খুঁজুন">
+    <button class="primary" id="searchBtn">🔎 খুঁজুন</button>
+   </div>
+   <div class="quick" aria-label="দ্রুত সার্চ">
+    <button class="chip" data-query="জন্মনিবন্ধন">জন্মনিবন্ধন</button><button class="chip" data-query="NID">NID</button><button class="chip" data-query="পাসপোর্ট">পাসপোর্ট</button><button class="chip" data-query="ভূমি">ভূমি সেবা</button>
+   </div>
+  </section>
+ </div>
+</header>
+<main class="wrap">
+ <div class="notice"><span>ℹ️</span><div><b>একটি স্বাধীন তথ্য-সহায়ক ওয়েব অ্যাপ</b>নাগরিকবন্ধু সরকারি ওয়েবসাইট নয়। নিয়ম ও প্রয়োজনীয় কাগজপত্র পরিবর্তিত হতে পারে—আবেদনের আগে অফিসিয়াল সাইটে সর্বশেষ তথ্য যাচাই করুন।</div></div>
+ <div id="results" class="results" aria-live="polite"></div>
+ <section id="serviceSection">
+  <div class="sectionhead"><div><h2>জনপ্রিয় সেবা</h2><p>সেবার কার্ডে চাপ দিয়ে নির্দেশনা দেখুন</p></div><span class="counter" id="serviceCount"></span></div>
+  <div class="grid" id="services"></div>
+ </section>
+ <section>
+  <div class="sectionhead"><div><h2>ব্যবহার করবেন যেভাবে</h2><p>মাত্র তিনটি সহজ ধাপ</p></div></div>
+  <div class="steps">
+   <article class="step"><div class="stepnum">১</div><h3>সেবা খুঁজুন</h3><p>সার্চ বক্সে সেবার নাম লিখুন অথবা জনপ্রিয় সেবা থেকে বেছে নিন।</p></article>
+   <article class="step"><div class="stepnum">২</div><h3>নির্দেশনা পড়ুন</h3><p>সাধারণ প্রস্তুতি ও করণীয় ধাপগুলো দেখে নিন।</p></article>
+   <article class="step"><div class="stepnum">৩</div><h3>অফিসিয়াল সাইটে যান</h3><p>সরকারি পোর্টালে নিয়ম, ফি ও আবেদনপদ্ধতি যাচাই করুন।</p></article>
+  </div>
+ </section>
+ <section class="helpbox"><div><h3>আপনার প্রয়োজনের সেবা খুঁজে পাননি?</h3><p>নতুন সেবা যোগ করার জন্য পরবর্তী সংস্করণে ব্যবহারকারীর মতামত নেওয়া হবে।</p></div><a class="btn primary" href="https://www.mygov.bd/" target="_blank" rel="noopener noreferrer">myGov দেখুন ↗</a></section>
+</main>
+<footer><div class="wrap footrow"><span>© NagorikBondhu · প্রাথমিক প্রোটোটাইপ</span><span>ব্যক্তিগত পরিচয়পত্র বা গোপন তথ্য এখানে লিখবেন না।</span></div></footer>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+ <div class="dialog">
+  <div class="dialogtop"><div class="iconbox" id="modalIcon">📄</div><div><h2 id="modalTitle"></h2><p class="sub" id="modalDesc"></p></div><button class="close" id="closeModal" aria-label="বন্ধ করুন">✕</button></div>
+  <h3>প্রস্তুতির জন্য সাধারণ তথ্য</h3><ul id="docsList"></ul>
+  <h3>কোথা থেকে শুরু করবেন</h3><ol id="stepsList"></ol>
+  <div class="callout">এটি সাধারণ নির্দেশনা, চূড়ান্ত কাগজপত্রের তালিকা নয়। সর্বশেষ নিয়ম সংশ্লিষ্ট সরকারি পোর্টালে যাচাই করুন।</div>
+  <div class="dialogactions"><a class="btn primary" id="officialLink" href="#" target="_blank" rel="noopener noreferrer">অফিসিয়াল ওয়েবসাইট খুলুন ↗</a><button class="btn light" id="doneBtn">ফিরে যান</button></div>
+ </div>
+</div>
+<script>
+const data=[
+{id:"birth",name:"জন্মনিবন্ধন",icon:"👶",desc:"জন্মনিবন্ধন আবেদন ও সংশোধনের তথ্য।",keys:["জন্ম","জন্মনিবন্ধন","birth","birth registration"],url:"https://bdris.gov.bd/",docs:["আবেদনের ধরন অনুযায়ী পরিচয় ও জন্মসংক্রান্ত প্রমাণপত্র লাগতে পারে।","প্রযোজ্য ক্ষেত্রে পিতা-মাতার তথ্য ও ঠিকানার প্রমাণ প্রস্তুত রাখুন।"],steps:["জন্মনিবন্ধনের অফিসিয়াল পোর্টাল খুলুন।","নতুন আবেদন বা সংশোধনের উপযুক্ত বিকল্প নির্বাচন করুন।","সাইটে দেওয়া বর্তমান নির্দেশনা ও প্রয়োজনীয় কাগজপত্র যাচাই করুন।"]},
+{id:"nid",name:"জাতীয় পরিচয়পত্র (NID)",icon:"🪪",desc:"NID নিবন্ধন, তথ্য সংশোধন ও সংশ্লিষ্ট সেবা।",keys:["nid","এনআইডি","জাতীয় পরিচয়","জাতীয় পরিচয়","ভোটার","পরিচয়পত্র"],url:"https://services.nidw.gov.bd/",docs:["সেবার ধরন অনুযায়ী পরিচয়, জন্মতারিখ ও ঠিকানার সমর্থনকারী নথি লাগতে পারে।","নির্দিষ্ট তালিকা ও যোগ্যতা অফিসিয়াল পোর্টালে যাচাই করুন।"],steps:["NID সার্ভিস পোর্টালে যান।","আপনার প্রয়োজন অনুযায়ী সেবা নির্বাচন করুন।","বর্তমান নির্দেশনা অনুসরণ করে আবেদন বা সংশোধনের প্রক্রিয়া দেখুন।"]},
+{id:"passport",name:"পাসপোর্ট / ই-পাসপোর্ট",icon:"🛂",desc:"পাসপোর্ট আবেদন ও অফিসিয়াল নির্দেশনা।",keys:["পাসপোর্ট","passport","ই-পাসপোর্ট","epassport"],url:"https://www.epassport.gov.bd/",docs:["প্রযোজ্য নিয়ম অনুযায়ী NID বা জন্মনিবন্ধনের তথ্য প্রয়োজন হতে পারে।","আবেদনকারীর ধরন ও পরিস্থিতি অনুযায়ী অতিরিক্ত নথি লাগতে পারে।"],steps:["ই-পাসপোর্টের অফিসিয়াল ওয়েবসাইট খুলুন।","আবেদনের শর্ত, ফি ও প্রয়োজনীয় নথি যাচাই করুন।","তথ্য মিলিয়ে নিয়ে অফিসিয়াল নির্দেশনা অনুসরণ করুন।"]},
+{id:"land",name:"ভূমি সেবা",icon:"🏡",desc:"জমি, খতিয়ান ও ভূমি-সংক্রান্ত অনলাইন সেবা।",keys:["ভূমি","জমি","খতিয়ান","খতিয়ান","নামজারি","land","মিউটেশন"],url:"https://land.gov.bd/",docs:["সেবার ধরন অনুযায়ী জমির রেকর্ড, খতিয়ান বা দলিলের তথ্য প্রয়োজন হতে পারে।","কোন নথি লাগবে তা নির্দিষ্ট সেবার নির্দেশনায় যাচাই করুন।"],steps:["ভূমি মন্ত্রণালয়ের অফিসিয়াল পোর্টাল খুলুন।","আপনার প্রয়োজনের সেবা বেছে নিন।","আবেদন করার আগে জমির তথ্য ও প্রয়োজনীয় কাগজপত্র যাচাই করুন।"]},
+{id:"mygov",name:"অন্যান্য সরকারি সেবা",icon:"🏛️",desc:"বিভিন্ন সরকারি সেবা খুঁজতে myGov পোর্টাল।",keys:["সরকারি","সেবা","mygov","অন্যান্য","government"],url:"https://www.mygov.bd/",docs:["প্রয়োজনীয় কাগজপত্র নির্দিষ্ট সেবার ওপর নির্ভর করে।","পোর্টালে সেবাভিত্তিক নির্দেশনা পড়ুন।"],steps:["myGov-এর অফিসিয়াল ওয়েবসাইট খুলুন।","সার্চ বা বিভাগ থেকে প্রয়োজনীয় সেবা খুঁজুন।","শর্ত, কাগজপত্র ও ফি যাচাই করে পরবর্তী ধাপ নিন।"]},
+{id:"passporthelp",name:"সেবা খুঁজতে সহায়তা",icon:"🧭",desc:"কোন সরকারি সাইট থেকে শুরু করবেন তা বুঝতে সাহায্য।",keys:["সহায়তা","সাহায্য","কোথায়","কিভাবে","কীভাবে"],url:"https://bangladesh.gov.bd/",docs:["আপনার সমস্যাটি ও সেবার নাম আগে পরিষ্কার করুন।","কোনো অচেনা ব্যক্তি বা সাইটকে OTP, পাসওয়ার্ড বা পরিচয়পত্রের গোপন তথ্য দেবেন না।"],steps:["বাংলাদেশ জাতীয় তথ্য বাতায়ন খুলুন।","প্রাসঙ্গিক মন্ত্রণালয় বা সেবার অফিসিয়াল লিংক খুঁজুন।","প্রয়োজনে সংশ্লিষ্ট অফিসের কাছ থেকে তথ্য নিশ্চিত করুন।"]}
+];
+const $=id=>document.getElementById(id);
+function makeCard(s){return `<article class="card"><div class="iconbox">${s.icon}</div><h3>${s.name}</h3><p>${s.desc}</p><div class="actions"><button class="btn primary" data-detail="${s.id}">বিস্তারিত দেখুন</button><a class="btn light" href="${s.url}" target="_blank" rel="noopener noreferrer">অফিসিয়াল সাইট ↗</a></div></article>`}
+$("services").innerHTML=data.map(makeCard).join("");$("serviceCount").textContent=data.length+"টি বিভাগ";
+function showDetails(id){const s=data.find(x=>x.id===id);if(!s)return;$("modalIcon").textContent=s.icon;$("modalTitle").textContent=s.name;$("modalDesc").textContent=s.desc;$("docsList").innerHTML=s.docs.map(x=>`<li>${x}</li>`).join("");$("stepsList").innerHTML=s.steps.map(x=>`<li>${x}</li>`).join("");$("officialLink").href=s.url;$("modal").classList.add("open");$("closeModal").focus()}
+function search(){const q=$("searchInput").value.trim().toLocaleLowerCase("bn");if(!q){$("results").innerHTML='<div class="empty">সেবার নাম লিখুন—যেমন জন্মনিবন্ধন, NID বা পাসপোর্ট।</div>';return}const matches=data.filter(s=>(s.name+" "+s.desc+" "+s.keys.join(" ")).toLocaleLowerCase("bn").includes(q));$("results").innerHTML=matches.length?`<div class="sectionhead"><div><h2>সার্চের ফলাফল</h2><p>আপনার খোঁজার সঙ্গে মেলে এমন সেবা</p></div><span class="counter">${matches.length}টি পাওয়া গেছে</span></div><div class="grid">${matches.map(makeCard).join("")}</div>`:'<div class="empty">এই নামে সেবা পাওয়া যায়নি। অন্য শব্দ দিয়ে চেষ্টা করুন অথবা myGov দেখুন।</div>';$("results").scrollIntoView({behavior:"smooth",block:"start"})}
+document.addEventListener("click",e=>{const d=e.target.closest("[data-detail]");if(d)showDetails(d.dataset.detail);const q=e.target.closest("[data-query]");if(q){$("searchInput").value=q.dataset.query;search()}});
+$("searchBtn").addEventListener("click",search);$("searchInput").addEventListener("keydown",e=>{if(e.key==="Enter")search()});
+function closeModal(){$("modal").classList.remove("open")}
+$("closeModal").addEventListener("click",closeModal);$("doneBtn").addEventListener("click",closeModal);$("modal").addEventListener("click",e=>{if(e.target===$("modal"))closeModal()});document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
+</script>
+</body>
+</html>
