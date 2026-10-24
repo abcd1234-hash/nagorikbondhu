@@ -4,7 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#087f5b">
-<meta name="description" content="বাংলাদেশের নাগরিক সেবা সম্পর্কে সহজ বাংলায় তথ্য ও সরকারি ওয়েবসাইটের লিংক।">
+<meta name="description" content="নাগরিকবন্ধু: বাংলাদেশের নাগরিক সেবা সম্পর্কে সহজ বাংলায় প্রাথমিক নির্দেশনা ও সরকারি ওয়েবসাইটের লিংক।">
+<meta property="og:title" content="নাগরিকবন্ধু — সহজ বাংলায় নাগরিক সেবা">
+<meta property="og:description" content="জন্মনিবন্ধন, NID, পাসপোর্ট ও ভূমি সেবার নির্দেশনা এবং অফিসিয়াল লিংক।">
 <title>NagorikBondhu — নাগরিকবন্ধু</title>
 <style>
 :root{--green:#087f5b;--deep:#064e3b;--mint:#e9f8f0;--ink:#17372c;--muted:#64766f;--bg:#f5faf7;--line:#dcebe3;--white:#fff}
@@ -46,7 +48,7 @@ footer{padding:20px 0 28px;border-top:1px solid var(--line);font-size:12px;line-
     <button class="primary" id="searchBtn">🔎 খুঁজুন</button>
    </div>
    <div class="quick" aria-label="দ্রুত সার্চ">
-    <button class="chip" data-query="জন্মনিবন্ধন">জন্মনিবন্ধন</button><button class="chip" data-query="NID">NID</button><button class="chip" data-query="পাসপোর্ট">পাসপোর্ট</button><button class="chip" data-query="ভূমি">ভূমি সেবা</button>
+    <button class="chip" data-query="জন্মনিবন্ধন">জন্মনিবন্ধন</button><button class="chip" data-query="NID">NID</button><button class="chip" data-query="পাসপোর্ট">পাসপোর্ট</button><button class="chip" data-query="ভূমি">ভূমি সেবা</button><button class="chip" data-query="যাচাই">যাচাই</button><button class="chip" data-query="কর">ভূমি কর</button>
    </div>
   </section>
  </div>
@@ -68,7 +70,7 @@ footer{padding:20px 0 28px;border-top:1px solid var(--line);font-size:12px;line-
  </section>
  <section class="helpbox"><div><h3>আপনার প্রয়োজনের সেবা খুঁজে পাননি?</h3><p>নতুন সেবা যোগ করার জন্য পরবর্তী সংস্করণে ব্যবহারকারীর মতামত নেওয়া হবে।</p></div><a class="btn primary" href="https://www.mygov.bd/" target="_blank" rel="noopener noreferrer">myGov দেখুন ↗</a></section>
 </main>
-<footer><div class="wrap footrow"><span>© NagorikBondhu · প্রাথমিক প্রোটোটাইপ</span><span>ব্যক্তিগত পরিচয়পত্র বা গোপন তথ্য এখানে লিখবেন না।</span></div></footer>
+<footer><div class="wrap footrow"><span>© NagorikBondhu · স্বাধীন তথ্য-সহায়ক ওয়েবসাইট</span><span>ব্যক্তিগত পরিচয়পত্র বা গোপন তথ্য এখানে লিখবেন না।</span></div></footer>
 <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
  <div class="dialog">
   <div class="dialogtop"><div class="iconbox" id="modalIcon">📄</div><div><h2 id="modalTitle"></h2><p class="sub" id="modalDesc"></p></div><button class="close" id="closeModal" aria-label="বন্ধ করুন">✕</button></div>
@@ -85,6 +87,8 @@ const data=[
 {id:"passport",name:"পাসপোর্ট / ই-পাসপোর্ট",icon:"🛂",desc:"পাসপোর্ট আবেদন ও অফিসিয়াল নির্দেশনা।",keys:["পাসপোর্ট","passport","ই-পাসপোর্ট","epassport"],url:"https://www.epassport.gov.bd/",docs:["প্রযোজ্য নিয়ম অনুযায়ী NID বা জন্মনিবন্ধনের তথ্য প্রয়োজন হতে পারে।","আবেদনকারীর ধরন ও পরিস্থিতি অনুযায়ী অতিরিক্ত নথি লাগতে পারে।"],steps:["ই-পাসপোর্টের অফিসিয়াল ওয়েবসাইট খুলুন।","আবেদনের শর্ত, ফি ও প্রয়োজনীয় নথি যাচাই করুন।","তথ্য মিলিয়ে নিয়ে অফিসিয়াল নির্দেশনা অনুসরণ করুন।"]},
 {id:"land",name:"ভূমি সেবা",icon:"🏡",desc:"জমি, খতিয়ান ও ভূমি-সংক্রান্ত অনলাইন সেবা।",keys:["ভূমি","জমি","খতিয়ান","খতিয়ান","নামজারি","land","মিউটেশন"],url:"https://land.gov.bd/",docs:["সেবার ধরন অনুযায়ী জমির রেকর্ড, খতিয়ান বা দলিলের তথ্য প্রয়োজন হতে পারে।","কোন নথি লাগবে তা নির্দিষ্ট সেবার নির্দেশনায় যাচাই করুন।"],steps:["ভূমি মন্ত্রণালয়ের অফিসিয়াল পোর্টাল খুলুন।","আপনার প্রয়োজনের সেবা বেছে নিন।","আবেদন করার আগে জমির তথ্য ও প্রয়োজনীয় কাগজপত্র যাচাই করুন।"]},
 {id:"mygov",name:"অন্যান্য সরকারি সেবা",icon:"🏛️",desc:"বিভিন্ন সরকারি সেবা খুঁজতে myGov পোর্টাল।",keys:["সরকারি","সেবা","mygov","অন্যান্য","government"],url:"https://www.mygov.bd/",docs:["প্রয়োজনীয় কাগজপত্র নির্দিষ্ট সেবার ওপর নির্ভর করে।","পোর্টালে সেবাভিত্তিক নির্দেশনা পড়ুন।"],steps:["myGov-এর অফিসিয়াল ওয়েবসাইট খুলুন।","সার্চ বা বিভাগ থেকে প্রয়োজনীয় সেবা খুঁজুন।","শর্ত, কাগজপত্র ও ফি যাচাই করে পরবর্তী ধাপ নিন।"]},
+{id:"birthverify",name:"জন্মনিবন্ধন যাচাই",icon:"🔎",desc:"জন্মনিবন্ধনের তথ্য যাচাইয়ের অফিসিয়াল পোর্টাল।",keys:["যাচাই","জন্ম যাচাই","জন্মনিবন্ধন যাচাই","verify","verification","brn"],url:"https://everify.bdris.gov.bd/",docs:["জন্মনিবন্ধন নম্বর ও জন্মতারিখের মতো তথ্য প্রয়োজন হতে পারে।","ব্যক্তিগত তথ্য কেবল অফিসিয়াল পোর্টালেই লিখুন।"],steps:["জন্ম ও মৃত্যু নিবন্ধন যাচাইয়ের অফিসিয়াল পোর্টাল খুলুন।","পোর্টালে চাওয়া তথ্য পূরণ করুন।","ফলাফল দেখে প্রয়োজনে সংশ্লিষ্ট নিবন্ধন কার্যালয়ের সঙ্গে যোগাযোগ করুন."]},
+{id:"landtax",name:"ভূমি উন্নয়ন কর",icon:"🧾",desc:"জমির ভূমি উন্নয়ন কর ও দাখিলা-সংক্রান্ত সেবা।",keys:["ভূমি কর","কর","দাখিলা","land tax","land development tax","খাজনা"],url:"https://ldtax.gov.bd/",docs:["সেবার ধরন অনুযায়ী জাতীয় পরিচয়পত্রের তথ্য, মোবাইল নম্বর ও জমির খতিয়ান/হোল্ডিংয়ের তথ্য প্রয়োজন হতে পারে।","সঠিক কাগজপত্র ও নিয়ম অফিসিয়াল সাইটে যাচাই করুন।"],steps:["ভূমি উন্নয়ন করের অফিসিয়াল পোর্টাল খুলুন।","নাগরিক নিবন্ধন বা প্রয়োজনীয় সেবা বেছে নিন।","পোর্টালের নির্দেশনা অনুযায়ী তথ্য যাচাই করে এগিয়ে যান."]},
 {id:"passporthelp",name:"সেবা খুঁজতে সহায়তা",icon:"🧭",desc:"কোন সরকারি সাইট থেকে শুরু করবেন তা বুঝতে সাহায্য।",keys:["সহায়তা","সাহায্য","কোথায়","কিভাবে","কীভাবে"],url:"https://bangladesh.gov.bd/",docs:["আপনার সমস্যাটি ও সেবার নাম আগে পরিষ্কার করুন।","কোনো অচেনা ব্যক্তি বা সাইটকে OTP, পাসওয়ার্ড বা পরিচয়পত্রের গোপন তথ্য দেবেন না।"],steps:["বাংলাদেশ জাতীয় তথ্য বাতায়ন খুলুন।","প্রাসঙ্গিক মন্ত্রণালয় বা সেবার অফিসিয়াল লিংক খুঁজুন।","প্রয়োজনে সংশ্লিষ্ট অফিসের কাছ থেকে তথ্য নিশ্চিত করুন।"]}
 ];
 const $=id=>document.getElementById(id);
